@@ -15,6 +15,24 @@
     #- highClouds
     - dewpointTemperature
 
+- platform: apcupsd
+  resources:
+    - status
+    - linev
+    - loadpct
+    - bcharge
+    - timeleft
+    - outputv
+    - retpct
+    - itemp
+    - battv
+    - linefreq
+    - lastxfer
+    - numxfers
+    - tonbatt
+    - cumonbatt
+
+
 
 
 #- platform: mqtt

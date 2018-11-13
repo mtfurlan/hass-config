@@ -36,14 +36,8 @@ mqtt:
     topic: "tele/mark/automation/LWT"
     payload: "Offline"
 
-
-
-# Track the sun
+apcupsd:
 sun:
-
-
-
-# Text to speech
 tts:
   - platform: google
 
