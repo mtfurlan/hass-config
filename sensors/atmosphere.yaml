@@ -1,0 +1,116 @@
+
+- platform: mqtt
+  state_topic: "tele/mark/bathroom/west-humidity-sensor/LWT"
+  name: "Bathroom West Humidity Sensor Online"
+  force_update: True
+- platform: mqtt
+  state_topic: "tele/mark/bathroom/west-humidity-sensor/bme280_0"
+  name: "Bathroom West Humidity Sensor Temperature 0"
+  unit_of_measurement: "°C"
+  value_template: '{{ value_json["Temperature"] }}'
+  force_update: True
+- platform: mqtt
+  state_topic: "tele/mark/bathroom/west-humidity-sensor/bme280_0"
+  name: "Bathroom West Humidity Sensor Humidity 0"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json["Humidity"] }}'
+  force_update: True
+- platform: mqtt
+  state_topic: "tele/mark/bathroom/west-humidity-sensor/bme280_1"
+  name: "Bathroom West Humidity Sensor Temperature 1"
+  unit_of_measurement: "°C"
+  value_template: '{{ value_json["Temperature"] }}'
+  force_update: True
+- platform: mqtt
+  state_topic: "tele/mark/bathroom/west-humidity-sensor/bme280_1"
+  name: "Bathroom West Humidity Sensor Humidity 1"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json["Humidity"] }}'
+  force_update: True
+
+- platform: mqtt
+  state_topic: "tele/mark/bathroom/east-humidity-sensor/LWT"
+  name: "Bathroom East Humidity Sensor Online"
+  force_update: True
+- platform: mqtt
+  state_topic: "tele/mark/bathroom/east-humidity-sensor/bme280_0"
+  name: "Bathroom East Humidity Sensor Temperature 0"
+  unit_of_measurement: "°C"
+  value_template: '{{ value_json["Temperature"] }}'
+  force_update: True
+- platform: mqtt
+  state_topic: "tele/mark/bathroom/east-humidity-sensor/bme280_0"
+  name: "Bathroom East Humidity Sensor Humidity 0"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json["Humidity"] }}'
+  force_update: True
+- platform: mqtt
+  state_topic: "tele/mark/bathroom/east-humidity-sensor/bme280_1"
+  name: "Bathroom East Humidity Sensor Temperature 1"
+  unit_of_measurement: "°C"
+  value_template: '{{ value_json["Temperature"] }}'
+  force_update: True
+- platform: mqtt
+  state_topic: "tele/mark/bathroom/east-humidity-sensor/bme280_1"
+  name: "Bathroom East Humidity Sensor Humidity 1"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json["Humidity"] }}'
+  force_update: True
+
+
+- platform: mqtt
+  name: "Living Room Atmosphere bme280 Temperature"
+  state_topic: "tele/mark/living-room/atmosphere-sensor/bme280"
+  unit_of_measurement: "°C"
+  value_template: '{{ value_json.Temperature }}'
+  force_update: True
+
+- platform: mqtt
+  name: "Living Room Atmosphere bme280 Pressure"
+  state_topic: "tele/mark/living-room/atmosphere-sensor/bme280"
+  unit_of_measurement: "Pa"
+  value_template: '{{ value_json.Pressure }}'
+  force_update: True
+
+- platform: mqtt
+  name: "Living Room Atmosphere bme280 Humidity"
+  state_topic: "tele/mark/living-room/atmosphere-sensor/bme280"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.Humidity }}'
+  force_update: True
+
+- platform: mqtt
+  name: "Living Room Atmosphere Lux"
+  state_topic: "tele/mark/living-room/atmosphere-sensor/lux"
+  unit_of_measurement: "lux"
+  value_template: '{{ value_json.Lux }}'
+  force_update: True
+
+
+- platform: mqtt
+  name: "Bedroom Atmosphere bme280 Temperature"
+  state_topic: "tele/mark/bedroom/atmosphere-sensor/bme280"
+  unit_of_measurement: "°C"
+  value_template: '{{ value_json.Temperature }}'
+  force_update: True
+
+- platform: mqtt
+  name: "Bedroom Atmosphere bme280 Pressure"
+  state_topic: "tele/mark/bedroom/atmosphere-sensor/bme280"
+  unit_of_measurement: "Pa"
+  value_template: '{{ value_json.Pressure }}'
+  force_update: True
+
+- platform: mqtt
+  name: "Bedroom Atmosphere bme280 Humidity"
+  state_topic: "tele/mark/bedroom/atmosphere-sensor/bme280"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.Humidity }}'
+  force_update: True
+
+- platform: mqtt
+  name: "Bedroom Atmosphere Lux"
+  state_topic: "tele/mark/bedroom/atmosphere-sensor/lux"
+  unit_of_measurement: "lux"
+  value_template: '{{ value_json.Lux }}'
+  force_update: True

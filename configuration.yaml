@@ -1,0 +1,54 @@
+homeassistant:
+  name: Mark's House
+  latitude: 42.4608
+  longitude: -83.1407
+  elevation: 197
+  unit_system: metric
+  time_zone: America/Detroit
+  customize: !include customize.yaml
+
+frontend:
+config:
+http:
+
+updater:
+  include_used_components: true
+
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables a map showing the location of tracked devices
+#map:
+
+influxdb:
+  host: localhost
+  port: 8086
+  database: home_assistant
+
+
+mqtt:
+  broker: 127.0.0.1
+  birth_message:
+    topic: "tele/mark/automation/LWT"
+    payload: "Online"
+  will_message:
+    topic: "tele/mark/automation/LWT"
+    payload: "Offline"
+
+
+
+# Track the sun
+sun:
+
+
+
+# Text to speech
+tts:
+  - platform: google
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+sensor: !include_dir_merge_list sensors
+device_tracker: !include device_tracker.yaml

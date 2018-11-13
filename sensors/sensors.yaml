@@ -1,0 +1,43 @@
+- platform: yr
+  name: "Weather"
+  monitored_conditions:
+    - temperature
+    - symbol
+    - precipitation
+    - windSpeed
+    - pressure
+    - windDirection
+    - humidity
+    #- fog
+    - cloudiness
+    #- lowClouds
+    #- mediumClouds
+    #- highClouds
+    - dewpointTemperature
+
+
+
+#- platform: mqtt
+#  state_topic: "tele/mark/kitchen/temps/LWT"
+#  name: "Kitchen Temp Sensor Online"
+#  force_update: True
+#- platform: mqtt
+#  state_topic: "stat/mark/kitchen/temps/fridge"
+#  name: "Kitchen Fridge Temp"
+#  force_update: True
+#  unit_of_measurement: "C"
+#- platform: mqtt
+#  state_topic: "stat/mark/kitchen/temps/room"
+#  name: "Kitchen ROom Temp"
+#  force_update: True
+#  unit_of_measurement: "C"
+#- platform: mqtt
+#  state_topic: "stat/mark/kitchen/temps/freezer"
+#  name: "Kitchen Freezer Temp"
+#  force_update: True
+#  unit_of_measurement: "C"
+#- platform: mqtt
+#  state_topic: "stat/mark/kitchen/temps/oven"
+#  name: "Kitchen Oven Temp"
+#  force_update: True
+#  unit_of_measurement: "C"
