@@ -6,10 +6,16 @@ homeassistant:
   unit_system: metric
   time_zone: America/Detroit
   customize: !include customize.yaml
+  auth_providers:
+    - type: trusted_networks
+
 
 frontend:
 config:
 http:
+  trusted_networks:
+    - 192.168.1.0/24
+
 
 updater:
   include_used_components: true
@@ -25,6 +31,12 @@ influxdb:
   host: localhost
   port: 8086
   database: home_assistant
+
+
+#recorder:
+#  #  purge_interval: 0
+#  #purge_keep_days: 10
+#  db_url: postgresql://@/hass
 
 
 mqtt:
