@@ -1,0 +1,10 @@
+- platform: mqtt
+  name: 'Basement Light 003'
+  state_topic: 'stat/mark/basement/lights/003/POWER'
+  command_topic: 'cmnd/mark/basement/lights/003/POWER'
+  json_attributes_topic: 'tele/mark/basement/lights/003/STATE'
+  availability_topic: 'tele/mark/basement/lights/003/LWT'
+  payload_available: 'Online'
+  payload_not_available: 'Offline'
+  payload_on: 'ON'
+  payload_off: 'OFF'

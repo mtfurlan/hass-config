@@ -1,0 +1,48 @@
+- platform: template
+  sensors:
+    basement_light_003_time:
+      friendly_name: 'Basement Light 003 Time'
+      value_template: '{{ states.light.basement_light_003.attributes.Time }}'
+    basement_light_003_uptime:
+      friendly_name: 'Basement Light 003 Uptime'
+      value_template: '{{ states.light.basement_light_003.attributes.Uptime }}'
+    basement_light_003_vcc:
+      friendly_name: 'Basement Light 003 Vcc'
+      unit_of_measurement: 'V'
+      value_template: '{{ states.light.basement_light_003.attributes.Vcc }}'
+    basement_light_003_heap:
+      friendly_name: 'Basement Light 003 Heap'
+      value_template: '{{ states.light.basement_light_003.attributes.Heap }}'
+    basement_light_003_sleepmode:
+      friendly_name: 'Basement Light 003 SleepMode'
+      value_template: '{{ states.light.basement_light_003.attributes.SleepMode }}'
+    basement_light_003_sleep:
+      friendly_name: 'Basement Light 003 Sleep'
+      value_template: '{{ states.light.basement_light_003.attributes.Sleep }}'
+    basement_light_003_loadavg:
+      friendly_name: 'Basement Light 003 LoadAvg'
+      unit_of_measurement: '%'
+      value_template: '{{ states.light.basement_light_003.attributes.LoadAvg }}'
+    basement_light_003_wifi_ssid:
+      friendly_name: 'Basement Light 003 Wifi SSId'
+      value_template: "{{ state_attr('light.basement_light_003', 'Wifi')['SSId'] }}"
+    basement_light_003_wifi_bssid:
+      friendly_name: 'Basement Light 003 Wifi BSSId'
+      value_template: "{{ state_attr('light.basement_light_003', 'Wifi')['BSSId'] }}"
+    basement_light_003_wifi_channel:
+      friendly_name: 'Basement Light 003 Wifi Channel'
+      value_template: "{{ state_attr('light.basement_light_003', 'Wifi')['Channel'] }}"
+    basement_light_003_wifi_rssi:
+      friendly_name: 'Basement Light 003 Wifi RSSI'
+      unit_of_measurement: '%'
+      value_template: "{{ state_attr('light.basement_light_003', 'Wifi')['RSSI'] }}"
+    basement_light_003_wifi_linkcount:
+      friendly_name: 'Basement Light 003 Wifi Link Count'
+      value_template: "{{ state_attr('light.basement_light_003', 'Wifi')['LinkCount'] }}"
+    basement_light_003_wifi_downtime:
+      friendly_name: 'Basement Light 003 Wifi Downtime'
+      value_template: "{{ state_attr('light.basement_light_003', 'Wifi')['Downtime'] }}"
+
+    basement_light_003_power:
+      friendly_name: 'Basement Light 003 Power'
+      value_template: '{{ states.light.basement_light_003.attributes.POWER }}'
