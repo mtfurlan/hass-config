@@ -20,6 +20,8 @@ http:
 updater:
   include_used_components: true
 
+system_health:
+
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -67,6 +69,8 @@ tts:
   - platform: google_translate
     service_name: google_say
 
+shell_command:
+  refresh_mqtt: '/home/homeassistant/.homeassistant/refresh_mtt.sh'
 
 # included configs
 group: !include groups.yaml

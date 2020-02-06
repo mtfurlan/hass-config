@@ -1,1 +1,10 @@
-[]
+- alias: Hass notify mqtt on reboot
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: mqtt.publish
+      data:
+        topic: "stat/mark/automation/hass"
+        payload: "Home assistant has started"
+    - service: shell_command.refresh_mqtt
