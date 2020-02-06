@@ -1,0 +1,98 @@
+- platform: mqtt
+  name: 'Sensor Cluster basement east'
+  state_topic: 'stat/mark/sensors/cluster-basement-east/SENSOR'
+  json_attributes_topic: 'tele/mark/sensors/cluster-basement-east/STATE'
+  availability_topic: 'tele/mark/sensors/cluster-basement-east/LWT'
+  payload_available: 'Online'
+  payload_not_available: 'Offline'
+- platform: template
+  sensors:
+    sensor_cluster_basement_east_time:
+      friendly_name: 'Sensor Cluster basement east Time'
+      value_template: '{{ states.sensor.sensor_cluster_basement_east.attributes.Time }}'
+    sensor_cluster_basement_east_uptime:
+      friendly_name: 'Sensor Cluster basement east Uptime'
+      value_template: '{{ states.sensor.sensor_cluster_basement_east.attributes.Uptime }}'
+    sensor_cluster_basement_east_vcc:
+      friendly_name: 'Sensor Cluster basement east Vcc'
+      unit_of_measurement: 'V'
+      value_template: '{{ states.sensor.sensor_cluster_basement_east.attributes.Vcc }}'
+    sensor_cluster_basement_east_heap:
+      friendly_name: 'Sensor Cluster basement east Heap'
+      value_template: '{{ states.sensor.sensor_cluster_basement_east.attributes.Heap }}'
+    sensor_cluster_basement_east_sleepmode:
+      friendly_name: 'Sensor Cluster basement east SleepMode'
+      value_template: '{{ states.sensor.sensor_cluster_basement_east.attributes.SleepMode }}'
+    sensor_cluster_basement_east_sleep:
+      friendly_name: 'Sensor Cluster basement east Sleep'
+      value_template: '{{ states.sensor.sensor_cluster_basement_east.attributes.Sleep }}'
+    sensor_cluster_basement_east_loadavg:
+      friendly_name: 'Sensor Cluster basement east LoadAvg'
+      unit_of_measurement: '%'
+      value_template: '{{ states.sensor.sensor_cluster_basement_east.attributes.LoadAvg }}'
+    sensor_cluster_basement_east_wifi_ssid:
+      friendly_name: 'Sensor Cluster basement east Wifi SSId'
+      value_template: "{{ state_attr('sensor.sensor_cluster_basement_east', 'Wifi')['SSId'] }}"
+    sensor_cluster_basement_east_wifi_bssid:
+      friendly_name: 'Sensor Cluster basement east Wifi BSSId'
+      value_template: "{{ state_attr('sensor.sensor_cluster_basement_east', 'Wifi')['BSSId'] }}"
+    sensor_cluster_basement_east_wifi_channel:
+      friendly_name: 'Sensor Cluster basement east Wifi Channel'
+      value_template: "{{ state_attr('sensor.sensor_cluster_basement_east', 'Wifi')['Channel'] }}"
+    sensor_cluster_basement_east_wifi_rssi:
+      friendly_name: 'Sensor Cluster basement east Wifi RSSI'
+      unit_of_measurement: '%'
+      value_template: "{{ state_attr('sensor.sensor_cluster_basement_east', 'Wifi')['RSSI'] }}"
+    sensor_cluster_basement_east_wifi_linkcount:
+      friendly_name: 'Sensor Cluster basement east Wifi Link Count'
+      value_template: "{{ state_attr('sensor.sensor_cluster_basement_east', 'Wifi')['LinkCount'] }}"
+    sensor_cluster_basement_east_wifi_downtime:
+      friendly_name: 'Sensor Cluster basement east Wifi Downtime'
+      value_template: "{{ state_attr('sensor.sensor_cluster_basement_east', 'Wifi')['Downtime'] }}"
+
+- platform: mqtt
+  name: 'Sensor Cluster basement east Temperature'
+  state_topic: 'tele/mark/sensors/cluster-basement-east/SENSOR'
+  unit_of_measurement: '°C'
+  value_template: "{{ value_json['BME280']['Temperature'] }}"
+  force_update: True
+  availability_topic: 'tele/mark/sensors/cluster-basement-east/LWT'
+  payload_available: 'Online'
+  payload_not_available: 'Offline'
+
+- platform: mqtt
+  name: 'Sensor Cluster basement east Pressure'
+  state_topic: 'tele/mark/sensors/cluster-basement-east/SENSOR'
+  unit_of_measurement: 'hPa'
+  value_template: "{{ value_json['BME280']['Pressure'] }}"
+  force_update: True
+  availability_topic: 'tele/mark/sensors/cluster-basement-east/LWT'
+  payload_available: 'Online'
+  payload_not_available: 'Offline'
+
+- platform: mqtt
+  name: 'Sensor Cluster basement east Humidity'
+  state_topic: 'tele/mark/sensors/cluster-basement-east/SENSOR'
+  unit_of_measurement: '%'
+  value_template: "{{ value_json['BME280']['Humidity'] }}"
+  force_update: True
+  availability_topic: 'tele/mark/sensors/cluster-basement-east/LWT'
+  payload_available: 'Online'
+  payload_not_available: 'Offline'
+
+- platform: mqtt
+  name: 'Sensor Cluster basement east Lux'
+  state_topic: 'tele/mark/sensors/cluster-basement-east/SENSOR'
+  unit_of_measurement: 'lux'
+  value_template: "{{ value_json['BH1750']['Illuminance'] }}"
+  force_update: True
+  availability_topic: 'tele/mark/sensors/cluster-basement-east/LWT'
+  payload_available: 'Online'
+  payload_not_available: 'Offline'
+
+- platform: template
+  sensors:
+    sensor_cluster_basement_east_pressure_kpa:
+      friendly_name: "Sensor Cluster basement east Pressure"
+      unit_of_measurement: 'kPa'
+      value_template: "{{ states('sensor.sensor_cluster_basement_east_pressure') | multiply(1/10) | round(1) }}"
