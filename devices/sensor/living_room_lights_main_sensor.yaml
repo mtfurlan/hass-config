@@ -1,0 +1,48 @@
+- platform: template
+  sensors:
+    living_room_lights_main_time:
+      friendly_name: 'Living Room Lights main Time'
+      value_template: '{{ states.light.living_room_lights_main.attributes.Time }}'
+    living_room_lights_main_uptime:
+      friendly_name: 'Living Room Lights main Uptime'
+      value_template: '{{ states.light.living_room_lights_main.attributes.Uptime }}'
+    living_room_lights_main_vcc:
+      friendly_name: 'Living Room Lights main Vcc'
+      unit_of_measurement: 'V'
+      value_template: '{{ states.light.living_room_lights_main.attributes.Vcc }}'
+    living_room_lights_main_heap:
+      friendly_name: 'Living Room Lights main Heap'
+      value_template: '{{ states.light.living_room_lights_main.attributes.Heap }}'
+    living_room_lights_main_sleepmode:
+      friendly_name: 'Living Room Lights main SleepMode'
+      value_template: '{{ states.light.living_room_lights_main.attributes.SleepMode }}'
+    living_room_lights_main_sleep:
+      friendly_name: 'Living Room Lights main Sleep'
+      value_template: '{{ states.light.living_room_lights_main.attributes.Sleep }}'
+    living_room_lights_main_loadavg:
+      friendly_name: 'Living Room Lights main LoadAvg'
+      unit_of_measurement: '%'
+      value_template: '{{ states.light.living_room_lights_main.attributes.LoadAvg }}'
+    living_room_lights_main_wifi_ssid:
+      friendly_name: 'Living Room Lights main Wifi SSId'
+      value_template: "{{ state_attr('light.living_room_lights_main', 'Wifi')['SSId'] }}"
+    living_room_lights_main_wifi_bssid:
+      friendly_name: 'Living Room Lights main Wifi BSSId'
+      value_template: "{{ state_attr('light.living_room_lights_main', 'Wifi')['BSSId'] }}"
+    living_room_lights_main_wifi_channel:
+      friendly_name: 'Living Room Lights main Wifi Channel'
+      value_template: "{{ state_attr('light.living_room_lights_main', 'Wifi')['Channel'] }}"
+    living_room_lights_main_wifi_rssi:
+      friendly_name: 'Living Room Lights main Wifi RSSI'
+      unit_of_measurement: '%'
+      value_template: "{{ state_attr('light.living_room_lights_main', 'Wifi')['RSSI'] }}"
+    living_room_lights_main_wifi_linkcount:
+      friendly_name: 'Living Room Lights main Wifi Link Count'
+      value_template: "{{ state_attr('light.living_room_lights_main', 'Wifi')['LinkCount'] }}"
+    living_room_lights_main_wifi_downtime:
+      friendly_name: 'Living Room Lights main Wifi Downtime'
+      value_template: "{{ state_attr('light.living_room_lights_main', 'Wifi')['Downtime'] }}"
+
+    living_room_lights_main_power:
+      friendly_name: 'Living Room Lights main Power'
+      value_template: '{{ states.light.living_room_lights_main.attributes.POWER }}'

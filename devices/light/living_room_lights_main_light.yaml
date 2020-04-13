@@ -1,0 +1,10 @@
+- platform: mqtt
+  name: 'Living Room Lights main'
+  state_topic: 'stat/mark/living-room/lights/main/POWER'
+  command_topic: 'cmnd/mark/living-room/lights/main/POWER'
+  json_attributes_topic: 'tele/mark/living-room/lights/main/STATE'
+  availability_topic: 'tele/mark/living-room/lights/main/LWT'
+  payload_available: 'Online'
+  payload_not_available: 'Offline'
+  payload_on: 'ON'
+  payload_off: 'OFF'
