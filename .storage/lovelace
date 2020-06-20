@@ -1,0 +1,83 @@
+{
+
+    "data": {
+        "config": {
+            "title": "Mark's House",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "climate.thermostat",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.basement_light_001"
+                                },
+                                {
+                                    "entity": "light.basement_light_002"
+                                },
+                                {
+                                    "entity": "light.basement_light_003"
+                                },
+                                {
+                                    "entity": "light.basement_light_004"
+                                },
+                                {
+                                    "entity": "light.basement_light_005"
+                                },
+                                {
+                                    "entity": "light.basement_light_006"
+                                },
+                                {
+                                    "entity": "light.basement_light_007"
+                                },
+                                {
+                                    "entity": "light.basement_light_008"
+                                },
+                                {
+                                    "entity": "light.basement_light_009"
+                                },
+                                {
+                                    "entity": "light.living_room_lights_main"
+                                },
+                                {
+                                    "entity": "light.bedroom_light"
+                                }
+                            ],
+                            "title": "Light",
+                            "type": "entities"
+                        }
+                    ],
+                    "path": "main",
+                    "title": "Main"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                "sensor.ups_transfer_count",
+                                "sensor.ups_total_time_on_battery",
+                                "sensor.ups_time_on_battery",
+                                "sensor.ups_time_left",
+                                "sensor.ups_status",
+                                "sensor.ups_load",
+                                "sensor.ups_last_transfer",
+                                "sensor.ups_input_voltage",
+                                "sensor.ups_battery_voltage",
+                                "sensor.ups_battery"
+                            ],
+                            "type": "entities"
+                        }
+                    ],
+                    "title": "UPS"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}
