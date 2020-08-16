@@ -1,5 +1,4 @@
 {
-
     "data": {
         "config": {
             "title": "Mark's House",
@@ -44,7 +43,10 @@
                                     "entity": "light.living_room_lights_main"
                                 },
                                 {
-                                    "entity": "light.bedroom_light"
+                                    "entity": "light.mark_bedroom_light"
+                                },
+                                {
+                                    "entity": "light.alisa_bedroom_light"
                                 }
                             ],
                             "title": "Light",

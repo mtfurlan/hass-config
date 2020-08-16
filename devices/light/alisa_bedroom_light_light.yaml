@@ -1,0 +1,10 @@
+- platform: mqtt
+  name: 'alisa Bedroom Light'
+  state_topic: 'stat/alisa/bedroom/lights/POWER'
+  command_topic: 'cmnd/alisa/bedroom/lights/POWER'
+  json_attributes_topic: 'tele/alisa/bedroom/lights/STATE'
+  availability_topic: 'tele/alisa/bedroom/lights/LWT'
+  payload_available: 'Online'
+  payload_not_available: 'Offline'
+  payload_on: 'ON'
+  payload_off: 'OFF'

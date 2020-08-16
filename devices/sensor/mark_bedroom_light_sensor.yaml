@@ -1,0 +1,48 @@
+- platform: template
+  sensors:
+    mark_bedroom_light_time:
+      friendly_name: 'mark Bedroom Light Time'
+      value_template: '{{ states.light.mark_bedroom_light.attributes.Time }}'
+    mark_bedroom_light_uptime:
+      friendly_name: 'mark Bedroom Light Uptime'
+      value_template: '{{ states.light.mark_bedroom_light.attributes.Uptime }}'
+    mark_bedroom_light_vcc:
+      friendly_name: 'mark Bedroom Light Vcc'
+      unit_of_measurement: 'V'
+      value_template: '{{ states.light.mark_bedroom_light.attributes.Vcc }}'
+    mark_bedroom_light_heap:
+      friendly_name: 'mark Bedroom Light Heap'
+      value_template: '{{ states.light.mark_bedroom_light.attributes.Heap }}'
+    mark_bedroom_light_sleepmode:
+      friendly_name: 'mark Bedroom Light SleepMode'
+      value_template: '{{ states.light.mark_bedroom_light.attributes.SleepMode }}'
+    mark_bedroom_light_sleep:
+      friendly_name: 'mark Bedroom Light Sleep'
+      value_template: '{{ states.light.mark_bedroom_light.attributes.Sleep }}'
+    mark_bedroom_light_loadavg:
+      friendly_name: 'mark Bedroom Light LoadAvg'
+      unit_of_measurement: '%'
+      value_template: '{{ states.light.mark_bedroom_light.attributes.LoadAvg }}'
+    mark_bedroom_light_wifi_ssid:
+      friendly_name: 'mark Bedroom Light Wifi SSId'
+      value_template: "{{ state_attr('light.mark_bedroom_light', 'Wifi')['SSId'] }}"
+    mark_bedroom_light_wifi_bssid:
+      friendly_name: 'mark Bedroom Light Wifi BSSId'
+      value_template: "{{ state_attr('light.mark_bedroom_light', 'Wifi')['BSSId'] }}"
+    mark_bedroom_light_wifi_channel:
+      friendly_name: 'mark Bedroom Light Wifi Channel'
+      value_template: "{{ state_attr('light.mark_bedroom_light', 'Wifi')['Channel'] }}"
+    mark_bedroom_light_wifi_rssi:
+      friendly_name: 'mark Bedroom Light Wifi RSSI'
+      unit_of_measurement: '%'
+      value_template: "{{ state_attr('light.mark_bedroom_light', 'Wifi')['RSSI'] }}"
+    mark_bedroom_light_wifi_linkcount:
+      friendly_name: 'mark Bedroom Light Wifi Link Count'
+      value_template: "{{ state_attr('light.mark_bedroom_light', 'Wifi')['LinkCount'] }}"
+    mark_bedroom_light_wifi_downtime:
+      friendly_name: 'mark Bedroom Light Wifi Downtime'
+      value_template: "{{ state_attr('light.mark_bedroom_light', 'Wifi')['Downtime'] }}"
+
+    mark_bedroom_light_power:
+      friendly_name: 'mark Bedroom Light Power'
+      value_template: '{{ states.light.mark_bedroom_light.attributes.POWER }}'

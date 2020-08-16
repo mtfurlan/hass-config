@@ -1,5 +1,5 @@
 - platform: mqtt
-  name: 'Bedroom Light'
+  name: 'mark Bedroom Light'
   state_topic: 'stat/mark/bedroom/lights/POWER'
   command_topic: 'cmnd/mark/bedroom/lights/POWER'
   json_attributes_topic: 'tele/mark/bedroom/lights/STATE'
