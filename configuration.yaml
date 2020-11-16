@@ -69,8 +69,9 @@ tts:
   - platform: google_translate
     service_name: google_say
 
+
 shell_command:
-  refresh_mqtt: '/home/homeassistant/.homeassistant/refresh_mtt.sh'
+  refresh_mqtt: '/home/hass/config/refresh_mtt.sh'
 
 # included configs
 group: !include groups.yaml
