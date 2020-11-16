@@ -72,6 +72,17 @@
                                 "sensor.ups_battery_voltage",
                                 "sensor.ups_battery"
                             ],
+                            "title": "Network UPS",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sensor.mephalaups_battery_runtime",
+                                "sensor.mephalaups_input_voltage",
+                                "sensor.mephalaups_load",
+                                "sensor.mephalaups_nominal_real_power"
+                            ],
+                            "title": "Mephala UPS",
                             "type": "entities"
                         }
                     ],
